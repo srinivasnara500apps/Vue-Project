@@ -1,0 +1,154 @@
+{
+    "plugins": {
+        "name": "plugins",
+        "api": {
+            "default": []
+        },
+        "grid": {
+            "enabled": true,
+            "html": "",
+            "grid": {
+                "main": "p-5 pb-2 mx-auto [&_.border-2.border-skin-primary.cursor-pointer]:border-0 ",
+                "grid": "md:flex flex-wrap",
+                "grid_sub": "mr-3 mb-3 divide-y divide-gray-200 rounded-lg "
+            }
+        },
+        "header": {
+            "heading": "Add Apps",
+            "sub_heading": "We ensure top-class security and we never share your personal information",
+            "class": {
+                "heading": "text-[15px] font-semibold text-skin-base",
+                "sub_heading": "text-[13px] mt-1 text-skin-secondary/80",
+                "main": "border-b border-skin-base/10 w-full px-5 pb-5"
+            }
+        },
+        "new": {},
+        "edit": {},
+        "delete": {},
+        "select": {
+            "type": "event",
+            "url": "",
+            "key": "uid"
+        },
+        "buttons": {
+            "add": { "enabled": false, "label": "", "popover": "" },
+            "edit": { "enabled": false, "icon": true, "popover": "" },
+            "delete": { "enabled": false, "icon": true, "popover": "" }
+        }
+    },
+    "apps": [
+        {
+            "fields": "client_id,client_secret,refresh_token,token_url",
+            "category_name": "Social",
+            "provider_name": "flow",
+            "description": "Facebook Pages lets you connect with your customers, fans and followers on the world's largest social network. Share relevant content to engage people who Like your page, create events to build and grow your community, and run a Facebook ad campaign by targeting location, age and more.",
+            "name": "Facebook",
+            "logo": "https://assets.infinity-api.net/emc2/plugins/facebook.svg",
+            "auth_type": "oauth2"
+        },
+        {
+            "fields": "client_id,client_secret,refresh_token,token_url",
+            "category_name": "Social",
+            "provider_name": "flow",
+            "description": "Instagram is a social network which is a fast, beautiful and fun way to share your photos with friends and family.",
+            "name": "Instagram",
+            "logo": "https://assets.infinity-api.net/emc2/plugins/instagram.svg",
+            "auth_type": "oauth2"
+        },
+        {
+            "fields": "consumer_key,consumer_secret,token_secret,access_token",
+            "category_name": "Social",
+            "provider_name": "flow",
+            "description": "Twitter is the social network that shows what's happening around the world in real time. Share your ideas in Tweets, follow hashtags to keep up with trends, and join in the global conversation.",
+            "name": "Twitter",
+            "logo": "https://assets.infinity-api.net/emc2/plugins/twitter.svg",
+            "auth_type": "oauth2"
+        },
+        {
+            "fields": "client_id,client_secret,refresh_token,token_url",
+            "provider_name": "flow",
+            "category_name": "Social",
+            "description": "LinkedIn is the world's largest social network for professionals. Manage your professional identity. Build and engage with your professional network. Access knowledge, insights and opportunities.",
+            "name": "LinkedIn",
+            "logo": "https://assets.infinity-api.net/emc2/plugins/linkedin.svg",
+            "auth_type": "oauth2"
+        }
+    ],
+    "userPlugins": {
+        "name": "user-plugins",
+        "api": {
+            "url": {
+                "base": "{{userPluginsURL}}?offset=0&limit=100&sort_column=id&sort_direction=desc",
+                "delete": {
+                    "url": "{{userPluginsURL}}{{uid}}",
+                    "method": "DELETE"
+                },
+                "edit": {
+                    "url": "{{userPluginsURL}}{{uid}}",
+                    "method": "PUT"
+                },
+                "add": {
+                    "url": "{{userPluginsURL}}",
+                    "method": "POST"
+                }
+            },
+            "pagination": {
+                "type": "infinite_scroll",
+                "infinite_scroll": { "distance": 10 },
+                "offset": 0,
+                "limit": 100,
+                "class": "max-h-[45rem]"
+            }
+        },
+        "grid": {
+            "enabled": true,
+            "html": "",
+            "grid": {
+                "main": "pt-5 pb-2 mx-auto",
+                "grid": "md:flex flex-wrap",
+                "grid_sub": "col-span-1 mr-3.5 mb-3.5 divide-y divide-gray-200 rounded-lg bg-skin-rhs"
+            }
+        },
+        "header": {
+            "heading": "My Apps",
+            "class": {
+                "heading": "text-[15px] font-semibold text-skin-base"
+            },
+            "sub_heading": "",
+            "main": "border-b border-skin-base/10 px-5 w-full"
+        },
+        "new": {},
+        "edit": {
+            "type": "event",
+            "url": "/plugins/{{uid}}",
+            "modal": {},
+            "message": {}
+        },
+
+        "delete": {
+            "type": "alert",
+            "modal": {
+                "type": "dialog",
+                "title": "Are you sure you want to delete this app?",
+                "body": "Deleting will permanently remove. This cannot be undone.!",
+                "options": {
+                    "size": "xs",
+                    "cancelLabel": "Cancel",
+                    "okLabel": "Confirm",
+                    "okLabelColor": "",
+                    "cancelLabelColor": ""
+                }
+            },
+            "message": {
+                "success": "Deleted successfully",
+                "failure": "Error occured while deleting app"
+            }
+        },
+        "select": {},
+        "buttons": {
+            "add": { "enabled": false, "label": "New plugin", "popover": "New plugin" },
+            "edit": { "enabled": false, "icon": true, "popover": "Edit plugin" },
+            "delete": { "enabled": false, "icon": true, "popover": "Delete plugin" }
+        }
+    }
+}
