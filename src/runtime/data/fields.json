@@ -1,7 +1,0 @@
-{
-    "facebook": {
-        "posts": "message,from{picture,name},updated_time,full_picture,likes.summary(1){id,can_post,name,picture,username},comments.limit(10).summary(1).order(reverse_chronological){comment_count,like_count,message,from{name,picture},created_time,comments{message,name,from{name,picture}}},shares,attachments",
-        "feed": "message,from{picture,name},updated_time,full_picture,likes.summary(1){id,can_post,name,picture,username},comments.limit(10).summary(1).order(reverse_chronological){comment_count,like_count,message,from{name,picture},created_time,comments{message,name,from{name,picture}}},shares,attachments",
-        "tagged": "message,from{picture,name},updated_time,full_picture,created_time,shares"
-    }
-}
