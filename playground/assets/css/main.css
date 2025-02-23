@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+    :root {
+        /* Base or White theme */
+        --color-base: 51, 65, 81; /* Body base text color */
+        --color-muted: 107, 114, 128; /* Muted text color */
+        --color-white: 255, 255, 255; /* white color */
+        --color-primary: 30, 64, 175; /* Primary text color */
+        --color-secondary: 30, 41, 59; /* Secondary text color */
+        --color-accent: 17, 24, 39; /* accent color for menu */
+        --color-invert: 55, 65, 81; /* accent color for menu-invert */
+        --color-bg-lhs: 255, 255, 255; /* LHS base color */
+        --color-bg-rhs: 243, 244, 246; /* RHS base color */
+        --logo-image: url('./logos/logo.svg');
+    }
+    .theme-white {
+        /* Base or White theme */
+        --color-base: 10, 10, 10; /* Body text color */
+        --color-muted: 148, 163, 184; /* Muted text color */
+        --color-white: 255, 255, 255; /* white color */
+        --color-primary: 30, 64, 175; /* Primary text color */
+        --color-secondary: 57, 78, 106; /* Secondary text color */
+        --color-accent: 17, 24, 39; /* accent color for menu */
+        --color-invert: 55, 65, 81; /* accent color for menu-invert */
+        --color-active-bg: 246, 246, 246;
+        --color-active-text: 44, 41, 41;
+        --color-bg-lhs: 255, 255, 255; /* LHS base color */
+        --color-bg-rhs: 241, 245, 249; /* RHS base color */
+        --logo-image: url('./logos/logo.svg');
+    }
+    .theme-winter {
+        /* Winter - LhsGray-RhsWhite theme */
+        --color-base: 10, 10, 10; /* Body text color */
+        --color-muted: 148, 163, 184; /* Muted text color */
+        --color-white: 255, 255, 255; /* white color */
+        --color-primary: 30, 64, 175; /* Primary text color */
+        --color-secondary: 57, 78, 106; /* Secondary text color */
+        --color-accent: 17, 24, 39; /* accent color for menu */
+        --color-invert: 55, 65, 81; /* accent color for menu-invert */
+        --color-active-bg: 237, 237, 237;
+        --color-active-text: 44, 41, 41;
+        --color-bg-lhs: 243, 244, 246; /* LHS base color */
+        --color-bg-rhs: 241, 245, 249; /* RHS base color */
+        --logo-image: url('./logos/logo.svg');
+    }
+    .theme-smokylavender {
+        --color-base: 10, 10, 10; /* Body text color */
+        --color-muted: 107, 114, 128; /* Muted text color */
+        --color-white: 255, 255, 255; /* white color */
+        --color-primary: 53, 31, 51; /* Primary text color */
+        --color-secondary: 17, 24, 39; /* Secondary text color */
+        --color-accent: 255, 255, 255; /* accent color for menu */
+        --color-invert: 205, 205, 205; /* accent color for menu-invert */
+        --color-active-bg: 46, 23, 45;
+        --color-active-text: 255, 255, 255;
+        --color-bg-lhs: 53, 31, 51; /* LHS base color */
+        --color-bg-rhs: 246, 244, 246; /* RHS base color */
+        --logo-image: url('./logos/logo-white.svg');
+    }
+    .theme-royalplum {
+        /* Royal - LhsBlue-RhsWhite theme */
+        --color-base: 10, 10, 10; /* Body text color */
+        --color-muted: 107, 114, 128; /* Muted text color */
+        --color-white: 255, 255, 255; /* White color */
+        --color-primary: 74, 20, 140; /* Primary text color */
+        --color-secondary: 3, 7, 18; /* Secondary text color */
+        --color-accent: 255, 255, 255; /* accent color for menu */
+        --color-invert: 199, 210, 254; /* accent color for menu-invert */
+        --color-active-bg: 63, 24, 109;
+        --color-active-text: 255, 255, 255;
+        --color-bg-lhs: 74, 20, 140; /* LHS base color */
+        --color-bg-rhs: 246, 244, 246; /* RHS base color */
+        --logo-image: url('./logos/logo-white.svg');
+    }
+    .theme-oceanicharmony {
+        --color-base: 10, 10, 10; /* Body text color */
+        --color-muted: 107, 114, 128; /* Muted text color */
+        --color-white: 255, 255, 255; /* white color */
+        --color-primary: 0, 65, 128; /* Primary text color */
+        --color-secondary: 17, 24, 39; /* Secondary text color */
+        --color-accent: 255, 255, 255; /* accent color for menu */
+        --color-invert: 203, 214, 224; /* accent color for menu-invert */
+        --color-active-bg: 0, 53, 111;
+        --color-active-text: 255, 255, 255;
+        --color-bg-lhs: 0, 65, 128; /* LHS base color */
+        --color-bg-rhs: 242, 245, 248; /* RHS base color */
+        --logo-image: url('./logos/logo-white.svg');
+    }
+    .theme-midnightsky {
+        --color-base: 10, 10, 10; /* Body text color */
+        --color-muted: 107, 114, 128; /* Muted text color */
+        --color-white: 255, 255, 255; /* White color */
+        --color-primary: 7, 29, 79; /* Primary text color */
+        --color-secondary: 3, 7, 18; /* Secondary text color */
+        --color-accent: 255, 255, 255; /* accent color for menu */
+        --color-invert: 199, 210, 254; /* accent color for menu-invert */
+        --color-active-bg: 0, 19, 61;
+        --color-active-text: 255, 255, 255;
+        --color-bg-lhs: 7, 29, 79; /* LHS base color */
+        --color-bg-rhs: 245, 244, 246; /* RHS base color */
+        --logo-image: url('./logos/logo-white.svg');
+    }
+    .theme-mysticindigo {
+        --color-base: 10, 10, 10; /* Body text color */
+        --color-muted: 107, 114, 128; /* Muted text color */
+        --color-white: 255, 255, 255; /* white color */
+        --color-primary: 1, 61, 196; /* Primary text color */
+        --color-secondary: 17, 24, 39; /* Secondary text color */
+        --color-accent: 255, 255, 255; /* accent color for menu */
+        --color-invert: 203, 214, 224; /* accent color for menu-invert */
+        --color-active-bg: 0, 63, 168;
+        --color-active-text: 255, 255, 255;
+        --color-bg-lhs: 1, 61, 196; /* LHS base color */
+        --color-bg-rhs: 241, 245, 249; /* RHS base color */
+        --logo-image: url('./logos/logo-white.svg');
+    }
+    .theme-midnightmist {
+        --color-base: 51, 65, 81; /* Body base text color */
+        --color-muted: 107, 114, 128; /* Muted text color */
+        --color-white: 255, 255, 255; /* white color */
+        --color-primary: 30, 41, 59; /* Primary text color */
+        --color-secondary: 30, 41, 59; /* Secondary text color */
+        --color-accent: 255, 255, 255; /* accent color for menu */
+        --color-invert: 148, 163, 184; /* accent color for menu-invert */
+        --color-active-bg: 26, 33, 46;
+        --color-active-text: 255, 255, 255;
+        --color-bg-lhs: 30, 41, 59; /* LHS base color */
+        --color-bg-rhs: 241, 245, 249; /* RHS base color */
+        --logo-image: url('./logos/logo-white.svg');
+    }
+    .theme-dark {
+        /* Dark theme */
+        --color-base: 148, 163, 184; /* Body base color */
+        --color-muted: 107, 114, 128; /* Body secondary color */
+        --color-white: 13, 17, 23; /* white color */
+        --color-primary: 45, 46, 49; /* Primary color */
+        --color-secondary: 209, 213, 219; /* Secondary color */
+        --color-accent: 226, 232, 240; /* accent color for menu */
+        --color-invert: 156, 163, 175; /* accent color for menu */
+        --color-active-bg: 13, 14, 15;
+        --color-active-text: 255, 255, 255;
+        --color-bg-lhs: 25, 28, 32; /* LHS base color */
+        --color-bg-rhs: 45, 46, 49; /* RHS base color */
+        --color-input-bg: 226, 226, 226;
+        --logo-image: url('./logos/logo-white.svg');
+    }
+}
